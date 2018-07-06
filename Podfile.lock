@@ -1,0 +1,30 @@
+PODS:
+  - AudioKit (4.3):
+    - AudioKit/UI (= 4.3)
+  - AudioKit/UI (4.3)
+  - PKHUD (5.0.0)
+  - SnapKit (4.0.0)
+  - "UIView+Positioning (1.6)"
+
+DEPENDENCIES:
+  - AudioKit (~> 4.0)
+  - PKHUD
+  - SnapKit
+  - "UIView+Positioning"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AudioKit
+    - PKHUD
+    - SnapKit
+    - "UIView+Positioning"
+
+SPEC CHECKSUMS:
+  AudioKit: 95bd2427c1afa7954d71b0c6195a09b87b7448bc
+  PKHUD: 3c001512c6e002091184197a8de7a20420786e3b
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  "UIView+Positioning": 6e7236a429053ade11051fab7ff9053af36c77a8
+
+PODFILE CHECKSUM: 2e021395349b24179e7c4db8696d9d4625aca278
+
+COCOAPODS: 1.5.3
