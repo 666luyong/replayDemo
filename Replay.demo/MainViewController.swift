@@ -52,10 +52,36 @@ class MainViewController: UIViewController {
         } catch{
             
         }
+        AKSettings.defaultToSpeaker = true
         
+        //Patching
+        micMixer = AKMixer(mic)
+        micBooster = AKBooster(micMixer)
         
+        //监听时设置音量
+        micBooster.gain = 0
+        recorder = try? AKNodeRecorder(node: micMixer)
+        
+        if let file = recorder.audioFile {
+            player = AKPlayer(audioFile: file)
+        }
+        player.isLooping = true
+        player.completionHandler = playingEnd
+        
+        mainMixer = AKMixer(micBooster)
+        
+        AudioKit.output = mainMixer
+        
+        do {
+            try AudioKit.start()
+        } catch  {
+            
+        }
     }
     
+    func playingEnd()  {
+        
+    }
     
     
     
@@ -66,6 +92,9 @@ class MainViewController: UIViewController {
     }
 
     
+    private func setupUI(){
+        
+    }
  
 
 }
